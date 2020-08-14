@@ -8,3 +8,5 @@ My learning outcomes will include:
 * Web Frameworks - I will focus on React and Vue to develop websites
 * Tools - webpack, git, and CLI tools
 * Azure - Hosting static web apps with a serverless backend and distributing them globally
+
+View [the diary](diary.md) for progress updates.
