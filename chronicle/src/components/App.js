@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
+import CounterButton from './CounterButton';
 
-export default function App() {
+const App = () => {
   const [count, setCount] = useState(0);
 
   return (
     <div>
-      This is a sample stateful React application.
+      This is a componentized React application.
       <br />
       <br />
-      <button onClick={() => setCount(count + 1)}>{count}</button>
+      <CounterButton
+        count={count}
+        setCount={() => setCount(count + 1)}
+      />
     </div>
   );
-}
+};
+
+export default App;
