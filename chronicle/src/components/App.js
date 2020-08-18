@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CounterButton from './CounterButton';
 import CounterDisplay from './CounterDisplay';
+import StarsDisplay from './StarsDisplay';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -22,6 +23,8 @@ const App = () => {
           setCount={() => setCount(count + 1)}
         />
         <CounterDisplay count={count} />
+        <hr />
+        <StarsDisplay count={count} />
       </div>
       <footer>Footer</footer>
     </div>
