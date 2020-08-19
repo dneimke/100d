@@ -2,9 +2,9 @@ import React from 'react';
 
 const CounterDisplay = (props) => {
   return (
-    <div class="counter-label">
+    <div className="counter-label">
       Current value is:{' '}
-      <span class="counter-label-value">{props.count}</span>
+      <span className="counter-label-value">{props.count}</span>
     </div>
   );
 };
