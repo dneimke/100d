@@ -20,7 +20,12 @@ const DisplayLinks = (props) => {
             <p className="card-text">
               TODO: Get description from link URL
             </p>
-            <a className="card-link" target="_blank" href={x}>
+            <a
+              className="card-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={x}
+            >
               {x}
             </a>
           </div>
