@@ -1,33 +1,38 @@
 import React from 'react';
-import CounterButton from './CounterButton';
-import StarsDisplay from './StarsDisplay';
+import DisplayLinks from './DisplayLinks';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      links: [],
     };
   }
 
   UNSAFE_componentWillMount() {
-    localStorage.getItem('count') &&
+    localStorage.getItem('links') &&
       this.setState({
-        count: parseInt(
-          JSON.parse(localStorage.getItem('count')),
-          10
-        ),
+        links: JSON.parse(localStorage.getItem('links')),
       });
   }
 
   UNSAFE_componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem('count', JSON.stringify(nextState.count));
+    localStorage.setItem('links', JSON.stringify(nextState.links));
   }
 
-  updateCount(val) {
-    const { count } = this.state;
-    this.setState({ count: count + val });
+  addLink() {
+    let newLink = prompt('Enter the new URL');
+
+    if (!newLink || newLink.length === 0) return;
+
+    const newLinks = [...this.state.links, newLink];
+    this.setState({ links: newLinks });
   }
+
+  onRemoveLink = (link) => {
+    const newLinks = this.state.links.filter((x) => x !== link);
+    this.setState({ links: newLinks });
+  };
 
   render() {
     return (
@@ -42,17 +47,17 @@ class App extends React.Component {
           <div className="app-profile-link">Profile Link</div>
         </header>
         <div className="content">
-          Add or remove items: {}
-          <CounterButton
-            value={1}
-            setCount={(val) => this.updateCount(val)}
-          />
-          <CounterButton
-            value={-1}
-            setCount={(val) => this.updateCount(val)}
-          />
+          <button
+            className="btn btn-primary"
+            onClick={() => this.addLink()}
+          >
+            Add New Link
+          </button>
           <hr />
-          <StarsDisplay count={this.state.count} />
+          <DisplayLinks
+            links={this.state.links}
+            onRemove={this.onRemoveLink}
+          />
         </div>
         <footer>Footer</footer>
       </div>

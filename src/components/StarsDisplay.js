@@ -1,9 +1,10 @@
 import React from 'react';
+import utils from '../utils';
 
 const StarsDisplay = (props) => {
   return (
     <>
-      {Array.from({ length: props.count }, (_, i) => i).map((x) => (
+      {utils.range(1, props.count).map((x) => (
         <div key={x} className="star" />
       ))}
     </>
