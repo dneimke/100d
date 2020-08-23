@@ -1,5 +1,8 @@
 ## Status updates for the 100d coding challenge
 
+- [Day 10 - 24-AUG-20] Converted app to use card layout for links [ref: daily tweet](https://twitter.com/digory/status/1297672764585697285)
+- [Day 9 - 23-AUG-20] ILogger Scopes in .NET Core [ref: daily tweet](https://twitter.com/digory/status/1297404561359958016)
+- [Day 8 - 21-AUG-20] AppInsights geolocation lookup and IP address handling [ref: daily tweet](https://twitter.com/digory/status/1296567873113006085)
 - [Day 7 - 20-AUG-20] State and styling. Updated app to use localStorage [ref: daily tweet](https://twitter.com/digory/status/1296220427178479616)
 - [Day 6 - 19-AUG-20] Set-up CI/CD to deploy to gh-pages [ref: daily tweet](https://twitter.com/digory/status/1295851951121289217)
 - [Day 5 - 18-AUG-20] React components and CSS Grid layout [ref: daily tweet](https://twitter.com/digory/status/1295465162904723458)
